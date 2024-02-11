@@ -1,6 +1,6 @@
 resource "aws_security_group" "devOps-sg" {
   name        = "devOps Security Group"
-  description = "Open 22,443,80,8080,9090,300
+  description = "Open 22,443,80,8080,9090,3000"
   ingress = [
     	for port in [22, 80, 443, 8080 ,9090,300] : {
       description      = "TLS from VPC"
